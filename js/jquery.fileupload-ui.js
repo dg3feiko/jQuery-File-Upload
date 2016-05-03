@@ -68,6 +68,9 @@
             // The expected data type of the upload response, sets the dataType
             // option of the $.ajax upload requests:
             dataType: 'json',
+            
+            //use client preview instead of server side thunbnail after download
+            alwaysUsePreview: false,
 
             // Error and info messages:
             messages: {
@@ -185,6 +188,9 @@
                                 that._transition(template).done(
                                     function () {
                                         data.context = $(this);
+                                        if(that.options.alwaysUsePreview){
+                                            that._renderPreviews(data);
+                                        }                                        
                                         that._trigger('completed', e, data);
                                         that._trigger('finished', e, data);
                                         deferred.resolve();
