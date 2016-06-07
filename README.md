@@ -1,3 +1,12 @@
+This Fork
+==============
+* added support for 'alwaysUsePreview'
+
+
+Original README
+=================
+
+
 # jQuery File Upload Plugin
 
 ## Demo
